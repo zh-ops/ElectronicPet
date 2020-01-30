@@ -1,15 +1,16 @@
 import tkinter as tk
+def main():
+    root = tk.Tk()
+    root.title("电子宠物")
+    root.geometry('960x684')
 
-root = tk.Tk()
-root.title("电子宠物")
-root.geometry('960x684')
+    bg_path = '../picture/bg.gif'
+    bg_open = tk.PhotoImage(file=bg_path)
+    bg = tk.Label(root, image=bg_open, compound=tk.CENTER)
+    bg.pack()
 
-bg_path = '../picture/bg.gif'
-bg_open = tk.PhotoImage(file=bg_path)
-bg = tk.Label(root, image=bg_open, compound=tk.CENTER)
-bg.pack()
+    dog_path = '../picture/normal_dog.gif'
 
-dog_path = '../picture/normal_dog.gif'
-
-
-root.mainloop()
+    root.mainloop()
+if __name__ == "__main__":
+    main()
